@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-y: hidden;
+    height: 100%;
+    /* background-color: rgb(0, 0, 0); */
+}
+
+#form:hover {
+    animation:shine 2s infinite;
+}
+
+
+#form {
+    background: linear-gradient(to bottom, #0099FF 10%,#FF0033 100%);
+    width: 50vw;
+    margin: auto;
+    height: 80vh;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 60px;
+    border-radius: 80% 1%;
+    flex-direction: column;
+    box-shadow: 0 0 70px rgba(255, 0, 0,0.8),0 0 80px rgba(0, 0, 225,0.6);
+    animation: fly 5s ease-in-out infinite,glow 5s infinite;
+}
+@keyframes glow
+{
+    0%{
+        box-shadow: 0 0 50px rgba(30, 39, 224, 0.8);
+        
+    }50%{
+        
+        box-shadow: 0 0 70px rgba(255, 0, 0,0.8),0 0 80px rgba(0, 0, 225,0.6);
+    }100%{
+        
+        box-shadow: 0 0 50px rgba(15, 35, 208, 0.8);
+    }
+
+}
+h1 {
+    display: flex;
+}
+
+h1 span {
+    font-size: 6rem;
+    position: relative;
+    bottom: 35px;
+    left: 25px;
+}
+
+.content {
+    position: relative;
+    bottom: 20px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.inp {
+    width: 30vw;
+    height: 6vh;
+    padding: 0 0 0 40px;
+    border-radius: 50% 1%;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 0 0 70px rgba(255, 0, 0,0.8),0 0 80px rgba(0, 0, 225,0.6);
+
+}
+
+@keyframes fly {
+    50% {
+        transform: translate(50px, -30px);
+    }
+
+    100% {
+        transform: translate(-10px, 10);
+    }
+
+}
+i{
+    position: relative;
+    left: 30px;
+    top: 8px;
+    color:rgba(255, 255, 255, 0.8);
+    box-shadow:0px 0px 80px rgba(255, 255, 255, 0.8);
+    margin: 5px;
+}
+.msg{
+    position: absolute;
+    top: 60%;
+}
+#submit {
+    width: 10vw;
+    height: 5vh;
+    border-radius: 50% 1%;
+    background:rgba(255, 0, 0,0.8);
+    color: white;
+    cursor: pointer;
+    background: transparent;
+}
+@media (max-width:400px){
+ #form{
+    width: 100vw;
+    height: 85vh;
+    animation: glow 5s infinite;
+ }
+ .inp{
+    width: 70vw;
+ }
+ #pswd{
+    position: relative;
+    left: -20px;
+ }
+ .msg{
+    font-size: 3vmin;
+    left: -40px;
+    top:-138px;
+    position: absolute;
+ }
+ #submit{
+  width: 50vw;
+  height: 5vh; 
+  position: relative;
+  left: -50px;
+ }
+}
